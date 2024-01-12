@@ -3,3 +3,41 @@ body {
 	color: white;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.title {
+	text-align: center;
+}
+.container {
+	width: 35%;
+	border: 1px solid white;
+	border-radius: 1rem;
+	margin: 10px auto;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+.searchForm {
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+}
+.inputText {
+	width: -webkit-fill-available;
+	/* width:; */
+	font-size: 18px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	line-height: 16px;
+	margin-right: 10px;
+	/* box-shadow: none; */
+}
+.submitBtn {
+	background-color: rgb(6, 6, 44);
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: 600;
+}
+.position {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
