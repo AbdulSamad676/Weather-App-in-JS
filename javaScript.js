@@ -15,14 +15,20 @@ form.addEventListener('submit', function (e) {
 
 function getWeather(location) {
 	let city = document.querySelector('.cityName');
+	let tempDigit = document.querySelector('.tempDigit');
 	// console.log(`Your Location is: ${location}`);
 	const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
 
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
+			// getting Coordinates
+			let coordinates = data.coord;
+			const { lat, lon } = coordinates;
+			// Distructuring Object
+			console.log(`Latitude:${lat} and Longitude: ${lon}`);
 			city.textContent = data.name;
+			tempDigit.textContent = `${Math.round(data.main.temp)}°C`;
 			// temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
 			// descriptionElement.textContent = data.weather[0].description;
 		})
