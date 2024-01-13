@@ -46,14 +46,14 @@ body {
 }
 #langitude {
 	margin-top: 0px;
-	background-color: white;
+	/* background-color: white; */
 	color: #212121;
 	border-radius: 5px;
 	padding: 0.3125rem;
 }
 #laptitude {
 	margin-top: 0px;
-	background-color: white;
+	/* background-color: white; */
 	color: #212121;
 	border-radius: 5px;
 	padding: 0.3125rem;
@@ -70,8 +70,9 @@ body {
 	font-weight: 100 !important;
 }
 .tempDigit {
-	font-size: 30px;
+	font-size: 18px;
 	/* float: right; */
+	padding: 0.625rem;
 }
 .cityName {
 	text-align: center;
@@ -83,7 +84,7 @@ body {
 .statusData {
 	font-size: 1.25rem;
 	margin-left: 0.625rem;
-	background-color: white;
+	/* background-color: white; */
 	color: #212121;
 	padding: 0.625rem;
 	font-weight: 700;
