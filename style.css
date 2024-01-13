@@ -17,10 +17,10 @@ body {
 .searchForm {
 	display: flex;
 	box-sizing: border-box;
-	width: 100%;
+	/* width: 100%; */
 }
 .inputText {
-	width: -webkit-fill-available;
+	width: 100%;
 	/* width:; */
 	font-size: 18px;
 	padding: 5px 10px;
@@ -55,4 +55,10 @@ body {
 .tempDigit {
 	font-size: 30px;
 	/* float: right; */
+}
+.cityName {
+	text-align: center;
+	font-weight: 100;
+	font-size: xx-large;
+	margin: 0px;
 }
