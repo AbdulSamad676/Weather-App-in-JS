@@ -16,6 +16,7 @@ form.addEventListener('submit', function (e) {
 function getWeather(location) {
 	let city = document.querySelector('.cityName');
 	let tempDigit = document.querySelector('.tempDigit');
+	let statusData = document.querySelector('.statusData');
 	// console.log(`Your Location is: ${location}`);
 	const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
 
@@ -23,17 +24,26 @@ function getWeather(location) {
 		.then(response => response.json())
 		.then(data => {
 			// getting Coordinates
+			console.log(data);
 			let coordinates = data.coord;
-			const { lat, lon } = coordinates;
 			// Distructuring Object
-			console.log(`Latitude:${lat} and Longitude: ${lon}`);
-			city.textContent = data.name;
+			setCoordinates(coordinates);
+			city.textContent = `${data.name}`;
 			tempDigit.textContent = `${Math.round(data.main.temp)}°C`;
 			// temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
-			// descriptionElement.textContent = data.weather[0].description;
+			statusData.textContent = data.weather[0].description;
 		})
 		.catch(error => {
 			console.error('Error fetching weather data:', error);
 		});
 	city.innerHTML = location;
+}
+function setCoordinates(coordinates) {
+	const { lat, lon } = coordinates;
+	// console.log(`Latitude:${lat} and Longitude: ${lon}`);
+	let latitude = document.getElementById('langitude');
+	let laptitude = document.getElementById('laptitude');
+
+	latitude.textContent = `${lat} ° N`;
+	laptitude.textContent = `${lon}° E`;
 }

@@ -37,12 +37,29 @@ body {
 	font-weight: 600;
 }
 .position {
-	text-align: center;
+	/* text-align: center; */
 	display: flex;
 	justify-content: space-between;
 }
+.position-item > p {
+	margin-bottom: 10px !important;
+}
+#langitude {
+	margin-top: 0px;
+	background-color: white;
+	color: #212121;
+	border-radius: 5px;
+	padding: 0.3125rem;
+}
+#laptitude {
+	margin-top: 0px;
+	background-color: white;
+	color: #212121;
+	border-radius: 5px;
+	padding: 0.3125rem;
+}
 .temperature {
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -61,4 +78,14 @@ body {
 	font-weight: 100;
 	font-size: xx-large;
 	margin: 0px;
+	margin-bottom: 20px;
+}
+.statusData {
+	font-size: 1.25rem;
+	margin-left: 0.625rem;
+	background-color: white;
+	color: #212121;
+	padding: 0.625rem;
+	font-weight: 700;
+	border-radius: 0.625rem;
 }
