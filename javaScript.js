@@ -37,6 +37,7 @@ function getWeather(location) {
 			// temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
 			statusData.textContent = data.weather[0].description;
 			statusData.style.backgroundColor = 'white';
+			statusData.style.width = 'max-content';
 			// statusData.style.padding = '10px';
 		})
 		.catch(error => {
